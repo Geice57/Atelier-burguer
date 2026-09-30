@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin - Atelier Burguer</title>
+<link rel="stylesheet" href="css/staly.css">
+<link rel="stylesheet" href="css/acessibilidade.css">
+
+</head>
+<body>
+ <header>
+  <h1>🍔 Atelier Burguer</h1>
+
+  <h2>👨‍🍳 Controle dos Pedidos</h2>
+
+</header>
+
+<main class="formulario">
+
+<h2>📦 Pedido #1025</h2>
+
+<p>Altere o status do pedido:</p>
+
+<div class="status-admin">
+
+<button onclick="alterarStatus('recebido')">
+  🟢 Pedido recebido
+</button>
+<br>
+
+<button onclick="alterarStatus('preparando')">
+  🍔 Preparando
+</button>
+<br>
+
+<button onclick="alterarStatus('pronto')">
+   ✅ Pedido pronto
+</button>
+<br>
+
+<button onclick="alterarStatus('entrega')">
+     🛵 Saiu para entrega
+</button>
+<br>
+
+ <button onclick="alterarStatus('entregue')">
+      🎉 Entregue
+</button>
+
+</div>
+
+<p id="mensagemAdmin"></p>
+
+</main>
+
+<script>
+
+function alterarStatus(novoStatus) {
+
+ localStorage.setItem( "statusPedido", novoStatus);
+document.getElementById("mensagemAdmin").innerText = "✅ Status alterado para: " + nomeStatus(novoStatus);
+ alert("Pedido atualizado!\n\n" + "Novo status: " + nomeStatus(novoStatus));
+ }
+
+ function nomeStatus(status) {
+ if (status === "recebido") {
+  return "Pedido recebido";
+}
+if (status === "preparando") {
+  return "Preparando";
+}
+if (status === "pronto") {
+ return "Pedido pronto"; 
+}
+if (status === "entrega") {
+       return "Saiu para entrega";
+}
+
+if (status === "entregue") {
+ return "Entregue";
+}
+ }
+</script>
+
+<script src="js/acessibilidade.js"></script>
+</body>
+</html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Produtos - Atelier Burguer</title>
+<link rel="stylesheet" href="css/staly.css">
+<link rel="stylesheet" href="css/acessibilidade.css">
+</head>
+<body>
+    <!-- ==========CABEÇALHO ================== -->
+<header>
+<h1>🍔 Atelier Burguer</h1>
+<br>
+ <h2>Cardápio</h2>
+</header>
+<main>
+<!-- =========== 🍔 LANCHES ===================== -->
+<section id="lanches">
+ <h2 class="titulo-categoria">
+    🍔 Lanches
+</h2>
+
+<div class="produtos">
+ <!-- X-BURGER -->
+<div class="produto">
+
+<div class="imagem"> 🍔 </div>
+
+  <h3> X-Burger </h3>
+
+<p> Hambúrguer, queijo, alface e molho especial. </p>
+<strong> R$ 18,00 </strong>
+
+<button onclick="adicionarCarrinho('X-Burger', 18)"> Adicionar </button>
+
+</div>
+<!-- X-SALADA -->
+<div class="produto">
+
+<div class="imagem"> 🥪 </div>
+
+<h3> X-Salada </h3>
+
+<p> Hambúrguer, queijo, alface e tomate. </p>
+<strong> R$ 20,00 </strong>
+
+<button onclick="adicionarCarrinho('X-Salada', 20)"> Adicionar </button>
+
+ </div>
+<!-- BACON BURGER -->
+
+<div class="produto">
+
+<div class="imagem"> 🥓</div>
+
+<h3> Bacon Burger </h3>
+
+<p> Hambúrguer, queijo, bacon e molho especial </p>
+
+<strong>  R$ 22,00 </strong>
+
+<button onclick="adicionarCarrinho('Bacon Burger', 22)"> Adicionar </button>
+
+</div>
+<!-- X-EGG -->
+<div class="produto">
+
+<div class="imagem"> 🍳</div>
+  <h3> X-Egg </h3>
+
+<p> Hambúrguer, queijo e ovo.</p>
+
+<strong> R$ 21,00 </strong>
+
+<button onclick="adicionarCarrinho('X-Egg', 21)">  Adicionar </button>
+
+</div>
+ <!-- DUPLO BURGER -->
+
+ <div class="produto">
+
+<div class="imagem"> 🍔</div>
+
+<h3> Duplo Burger </h3>
+
+<p> Dois hambúrgueres, queijo e molho especial. </p>
+
+<strong> R$ 26,00 </strong>
+
+<button onclick="adicionarCarrinho('Duplo Burger', 26)"> Adicionar </button>
+
+</div>
+ <!-- ATELIER ESPECIAL -->
+
+<div class="produto">
+
+<div class="imagem"> 👑</div>
+
+<h3> Atelier Especial </h3>
+
+<p> Hambúrguer especial da casa. </p>
+
+<strong> R$ 30,00 </strong>
+
+<button onclick="adicionarCarrinho('Atelier Especial', 30)"> Adicionar </button> </div>
+</div>
+</section>
+<!-- ==== 🍟 PORÇÕES ============================ -->
+<section id="porcoes">
+
+<h2 class="titulo-categoria"> 🍟 Porções </h2>
+
+<div class="produtos">
+
+<div class="produto">
+
+<div class="imagem"> 🍟</div>
+
+<h3> Batata Frita </h3>
+
+<p> Porção de batata frita crocante.</p>
+
+<strong> R$ 12,00 </strong>
+
+<button onclick="adicionarCarrinho('Batata Frita', 12)">Adicionar </button>
+
+</div>
+
+<div class="produto">
+
+<div class="imagem"> 🍟</div>
+
+<h3> Batata Cheddar e Bacon </h3>
+
+<p> Batata frita com cheddar e bacon.</p>
+
+<strong> R$ 22,00 </strong>
+
+<button onclick="adicionarCarrinho('Batata Cheddar e Bacon', 22)"> Adicionar</button>
+</div>
+
+<div class="produto">
+
+<div class="imagem">🧅</div>
+
+<h3> Onion Rings </h3>
+
+<p> Anéis de cebola empanados e crocantes.</p>
+<strong> R$ 18,00 </strong>
+
+<button onclick="adicionarCarrinho('Onion Rings', 18)"> Adicionar </button>
+</div>
+
+<div class="produto">
+
+<div class="imagem"> 🍗</div>
+
+<h3> Nuggets </h3>
+
+<p> Nuggets crocantes de frango.</p>
+<strong> R$ 17,00 </strong>
+
+<button onclick="adicionarCarrinho('Nuggets', 17)"> Adicionar </button>
+</div>
+
+<div class="produto">
+
+<div class="imagem"> 🌭</div>
+
+<h3> Calabresa Acebolada</h3>
+
+<p> Calabresa grelhada com cebola.</p>
+<strong> R$ 24,00 </strong>
+
+<button onclick="adicionarCarrinho('Calabresa Acebolada', 24)"> Adicionar </button>
+</div>
+
+<div class="produto">
+
+<div class="imagem">🍽️</div>
+
+<h3> Combo de Porções </h3>
+
+<p> Seleção especial de porções. </p>
+
+<strong>  R$ 28,00 </strong>
+
+<button onclick="adicionarCarrinho('Combo de Porções', 28)"> Adicionar</button>
+</div>
+
+ </div>
+</section>
+<!-- ======= 🥤 BEBIDAS ===================== -->
+<section id="bebidas">
+ <h2 class="titulo-categoria">🥤 Bebidas </h2>
+
+<div class="produtos">
+
+<div class="produto">
+
+<div class="imagem">🥤 </div>
+
+<h3> Coca-Cola Lata </h3>
+
+<p> Refrigerante Coca-Cola 350ml.</p>
+<strong> R$ 6,00 </strong>
+
+<button onclick="adicionarCarrinho('Coca-Cola Lata', 6)"> Adicionar </button>
+</div>
+
+<div class="produto">
+
+<div class="imagem"> 🥤</div>
+
+<h3> Guaraná Lata </h3>
+<p> Refrigerante Guaraná 350ml.</p>
+<strong> R$ 6,00 </strong>
+
+<button onclick="adicionarCarrinho('Guaraná Lata', 6)">Adicionar</button>
+</div>
+<div class="produto">
+
+<div class="imagem">🥤</div>
+
+<h3> Coca-Cola 600ml </h3>
+
+<p>Coca-Cola 600ml.</p>
+<strong> R$ 8,00 </strong>
+
+<button onclick="adicionarCarrinho('Coca-Cola 600ml', 8)"> Adicionar </button>
+</div>
+
+<div class="produto">
+ 
+<div class="imagem">🧃</div>
+
+<h3>Suco Natural </h3>
+
+<p>Suco natural feito na hora.</p>
+<strong> R$ 9,00 </strong>
+
+<button onclick="adicionarCarrinho('Suco Natural', 9)">Adicionar</button>
+</div>
+
+<div class="produto">
+
+<div class="imagem"> 💧 </div>
+
+<h3> Água Mineral </h3>
+<p> Água mineral 500ml.</p>
+<strong>R$ 4,00</strong>
+
+<button onclick="adicionarCarrinho('Água Mineral', 4)">Adicionar</button>
+</div>
+
+<div class="produto">
+<div class="imagem">🥤</div>
+<h3> Milkshake de Chocolate </h3>
+<p>Milkshake cremoso de chocolate.</p>
+<strong> R$ 14,00 </strong>
+
+<button onclick="adicionarCarrinho('Milkshake de Chocolate', 14)">Adicionar</button>
+</div>
+</div>
+
+</section>
+<!-- ======== 🛒 CARRINHO ============================== -->
+<div class="botao-carrinho">
+<a href="./carrinho.html" class="botao"> <br>
+    🛒 Ver carrinho
+</a>
+           
+</div>
+    <!-- VOLTAR -->
+<div class="voltar">
+<a href="index.html"> <br>
+     ⬅ Voltar para o início
+</a>
+ </div>
+</main>
+<!-- =============== JAVASCRIPT ================== -->
+<script src="js/script.js"></script>
+
+<script src="js/acessibilidade.js"></script>
+</body>
+</html>
+

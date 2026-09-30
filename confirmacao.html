@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pedido Confirmado - Atelier Burguer</title>
+ <link rel="stylesheet" href="css/staly.css">
+ <link rel="stylesheet" href="css/acessibilidade.css">
+
+</head>
+<body>
+  <header>
+  <h1>🍔 Atelier Burguer</h1>
+</header>
+<main class="confirmacao">
+
+<div class="check">
+      ✅
+</div>
+  <h2>Pedido confirmado!</h2>
+
+<p>
+   Obrigado pela sua compra!
+</p>
+
+<p>
+      Acompanhe abaixo o andamento do seu pedido.
+</p>
+<br>
+ <h3>
+     📦 Pedido #1025
+</h3>
+
+<div class="status">
+
+<p id="recebido">
+     ⚪ Pedido recebido
+</p>
+
+<p id="preparando">
+     ⚪ Preparando
+</p>
+
+<p id="pronto">
+    ⚪ Pedido pronto
+</p>
+
+<p id="entrega">
+    ⚪ Saiu para entrega
+</p>
+
+<p id="entregue">
+     ⚪ Entregue
+</p>
+
+</div>
+
+<h3 id="mensagemStatus">
+    🕐 Aguardando atualização...
+</h3>
+
+<a href="index.html" class="botao"> 🏠 Voltar ao início </a>
+
+</main>
+
+<script>
+ function atualizarStatus() {
+ let status = localStorage.getItem("statusPedido") || "recebido";
+ let recebido = document.getElementById("recebido");
+ let preparando = document.getElementById("preparando");
+ let pronto = document.getElementById("pronto");
+ let entrega = document.getElementById("entrega");
+ let entregue = document.getElementById("entregue");
+ let mensagem = document.getElementById("mensagemStatus");
+// ============ PEDIDO RECEBIDO ==============//
+ if (status === "recebido") {
+     recebido.innerHTML =
+     "🟢 Pedido recebido";
+   preparando.innerHTML =
+    "⚪ Preparando";
+
+    pronto.innerHTML =
+     "⚪ Pedido pronto";
+
+    entrega.innerHTML =
+    "⚪ Saiu para entrega";
+
+     entregue.innerHTML =
+    "⚪ Entregue";
+
+    mensagem.innerText =
+    "🕐 Seu pedido foi recebido e aguarda preparação.";
+}
+// ===========  PREPARANDO ============= //
+
+else if (status === "preparando") {
+  recebido.innerHTML =
+    "🟢 Pedido recebido";
+  preparando.innerHTML =
+     "🟢 Preparando";
+
+   pronto.innerHTML =
+    "⚪ Pedido pronto";
+
+   entrega.innerHTML =
+    "⚪ Saiu para entrega";
+
+   entregue.innerHTML =
+     "⚪ Entregue";
+
+  mensagem.innerText =
+     "🍔 Seu pedido está sendo preparado!";
+}
+// ========== PEDIDO PRONTO =================//
+ else if (status === "pronto") {
+ recebido.innerHTML =
+    "🟢 Pedido recebido";
+ preparando.innerHTML =
+     "🟢 Preparando";
+ pronto.innerHTML =
+    "🟢 Pedido pronto";
+ entrega.innerHTML =
+    "⚪ Saiu para entrega";
+ entregue.innerHTML =
+     "⚪ Entregue";
+   mensagem.innerText =
+    "🎉 Seu pedido está pronto!";
+}
+ //============ SAIU PARA ENTREGA ===========//
+else if (status === "entrega") {
+ recebido.innerHTML =
+    "🟢 Pedido recebido";
+ preparando.innerHTML =
+    "🟢 Preparando";
+ pronto.innerHTML =
+    "🟢 Pedido pronto";
+ entrega.innerHTML =
+    "🟢 Saiu para entrega";
+ entregue.innerHTML =
+  "⚪ Entregue";
+  mensagem.innerText =
+     "🛵 Seu pedido saiu para entrega!";
+}
+// =========ENTREGUE ===============//
+ else if (status === "entregue") {
+ recebido.innerHTML =
+     "🟢 Pedido recebido";
+ preparando.innerHTML =
+    "🟢 Preparando";
+  pronto.innerHTML =
+    "🟢 Pedido pronto";
+  entrega.innerHTML =
+   "🟢 Saiu para entrega";
+  entregue.innerHTML =
+    "🟢 Entregue";
+  mensagem.innerText =
+    "🎉 Pedido entregue! Obrigado pela preferência.";
+}
+}
+// Atualiza quando abrir a página
+      atualizarStatus();
+ // Verifica mudanças a cada 2 segundos
+   setInterval(atualizarStatus, 2000);
+</script>
+
+<script src="js/acessibilidade.js"></script>
+</body>
+</html>
